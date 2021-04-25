@@ -14,7 +14,9 @@
 ## 教学阶段
 1、右上角fork一份到你自己的本地仓库
 
-2、进入fork的仓库，点击右上角的`Settings`，选择`Secrets`菜单，点击`New repository secret`。设置一个名为`ACCOUNT_INFO`的secret，其值为学校健康填报网站的用户名和密码（中间用`空格`或`换行符`隔开），具体步骤可参照下图（同时兼容`info.ini`文件配置账号密码方式，见下方`info.ini`，若在GitHub上使用，请将仓库`make private`!）
+2、两种方式配置密码：
+#### 1) 使用Github Secrets方式 安全、推荐
+进入fork的仓库，点击右上角的`Settings`，选择`Secrets`菜单，点击`New repository secret`。设置一个名为`ACCOUNT_INFO`的secret，其值为学校健康填报网站的用户名和密码（中间用`空格`或`换行符`隔开），具体步骤可参照下图：
 
 - 选择新建secret
 
@@ -24,7 +26,7 @@
 
      ![image](https://user-images.githubusercontent.com/15844309/115863310-dcec6a00-a467-11eb-8fd4-c7683ce17a60.png)
 
-- 文件配置方式（不推荐在Github仓库中使用）
+#### 2) 使用文件配置方式（不推荐在Github公开仓库中使用，请将仓库`make private`!）
 
       # info.ini
       [personal_info]
@@ -101,6 +103,6 @@
   
 5、然后这个程序每天早上八点零一会自动排队运行，GitHub一般延迟几分钟到十几分钟不等，真正实现白嫖，一劳永逸！
 
-几个问题：有些同学没有把这个仓库make private，这样你的密码都被别人看到了。。。有个同学info.ini里的“密码”两个字之间加了个空格。。。程序就跑不起来，唉，我写程序也就是半吊子，鲁棒性很差的，我还在慢慢学习，尽量改善这种体验。
+几个问题：有些同学没有把这个仓库make private，这样你的密码都被别人看到了。。。有同学info.ini里的“密码”两个字之间加了个空格。。。程序就跑不起来，我会尽量改善这种体验。
 
 #### p.s. 如果有帮助的话，点一个小小的Star可好？
