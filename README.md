@@ -46,7 +46,7 @@
     <img width="800" height="220" src="https://i.loli.net/2021/02/17/LbwJIu3CK2BFUHc.jpg" alt="点击set up a workflow yourself"/>
 
 
-- 在编辑框填写以下代码：
+- 删除编辑框原有内容，复制以下代码填入其中：
 
     <img width="800" height="420" src="https://i.loli.net/2021/02/17/8zEvtqRMXWa2Jej.jpg" alt="在编辑框填写代码"/>
 
@@ -95,7 +95,7 @@
               python3 main.py ${{env.params}}
     ```
 
-- 然后点Start commit就可以了
+- 然后点`Start commit`--`Commit new file`就可以了
 
 4、手动运行一下试试，点Actions, hhu-auto-clock-in, run workflow，等待几十秒，出现绿色就代表运行成功。再去信息门户上看下打卡历史记录，应该就有了。
 
