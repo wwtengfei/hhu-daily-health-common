@@ -1,8 +1,8 @@
 <a href="https://github.com/chloceg/hhu-daily-health-common/actions"><img src="https://badgen.net/badge/test/passing/green" alt="Build Status"></a>
 
-# hhu-daily-health
+# hhu-daily-health [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 河海大学每日健康打卡
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
 
 ## Maintainer
 [@chloecg](https://github.com/chloceg)
