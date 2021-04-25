@@ -4,8 +4,18 @@
 # hhu-daily-health
 
 河海大学每日健康打卡
-
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
+## Maintainer
+
+[@chloecg](https://github.com/chloceg)
+
+## Contributors
+This project thanks to all the people who contribute. 
+感谢[@yin1999](https://www.github.com/yin1999) 同学对此项目的优化！
+
+<a href="https://github.com/chloceg/hhu-daily-health-common/graphs/contributors"><img src="https://contrib.rocks/image?repo=chloceg/hhu-daily-health-common" /></a>
+
 ## 2021年2月1日
 所有的就都写在一个程序里了，有时间再做个通用版供大家使用吧。在Actions里每天跑一下就可以了^_^ 
 
