@@ -1,0 +1,41 @@
+name: hhu-auto-clock-in
+on:
+  schedule:
+    - cron: "1 0 * * *"  # scheduled at 08:01 (UTC+8) everyday #每天早上八点零一分打卡
+
+  workflow_dispatch: # workflow手动触发
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout master
+        uses: actions/checkout@v2
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with: 
+          python-version: 3.8
+
+      - name: download dependance
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # set to env:params
+      - name: get account info
+        shell: bash
+        env: 
+          ACCOUNT_INFO: ${{ secrets.ACCOUNT_INFO }}
+        if: env.ACCOUNT_INFO != null
+        run: |
+          arr=(${{env.ACCOUNT_INFO}})
+          if [ "${#arr[@]}" -gt "1" ]; then
+            echo "params=--u ${arr[0]} --p ${arr[1]}" >> ${GITHUB_ENV}
+          fi
+
+      # run main.py
+      - name: Run the program
+        run: |
+          python3 main.py ${{env.params}}
